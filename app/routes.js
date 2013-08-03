@@ -46,7 +46,7 @@ module.exports = function(app){
 
 	app.get('/thoughts/:post',function(req,res,next){
 		var section = 'thoughts';
-		Article.read(root + '/' + section + '/' + req.params.post,function(err,article){
+		Article.read(root + '/' + section + '/' + req.params.post + '.md',function(err,article){
 			if(err) return next(err);
 			res.render('article.html',{
 				article : article,
@@ -70,7 +70,7 @@ module.exports = function(app){
 
 	app.get('/issues/:post',function(req,res,next){
 		var section = 'issues';
-		Article.read(root + '/' + section + '/' + req.params.post,function(err,article){
+		Article.read(root + '/' + section + '/' + req.params.post + '.md',function(err,article){
 			if(err) return next(err);
 			res.render('article.html',{
 				article : article,

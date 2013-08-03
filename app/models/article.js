@@ -75,7 +75,6 @@ Article.list = function(path,callback){
 
 Article.read = function(path,callback){
 	co(function *(){
-		var path = __dirname + '/../../' + path + '.md';
 		var stat = yield fs.stat(path);
 		if(!stat.isFile()) throw new Error('Not found');
 		var file = yield fs.readFile(path,'utf8');
