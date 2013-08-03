@@ -1,0 +1,30 @@
+{
+  "name": "lbdremy.co",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lbdremy/lbdremy.co.git"
+  },
+  "author": "Remy Loubradou",
+  "license": "MIT",
+  "gitHead": "05359b663c7173174c310f59663903c3b141ce76",
+  "bugs": {
+    "url": "https://github.com/lbdremy/lbdremy.co/issues"
+  },
+  "dependencies": {
+    "marked": "~0.2.9",
+    "consolidate": "~0.9.1",
+    "handlebars": "~1.0.12",
+    "express": "~3.3.4",
+    "co": "~1.4.1",
+    "co-fs": "~1.0.0",
+    "highlight.js": "~7.3.0",
+    "nunjucks": "~0.1.9",
+    "moment": "~2.1.0"
+  }
+}
