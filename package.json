@@ -22,7 +22,7 @@
     "marked": "~0.2.9",
     "express": "~3.3.4",
     "co": "~1.4.1",
-    "co-fs": "~1.0.0",
+    "co-fs": "git://github.com/lbdremy/co-fs.git",
     "highlight.js": "~7.3.0",
     "nunjucks": "~0.1.9",
     "moment": "~2.1.0"
