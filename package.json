@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines" : {
+    "node" : "0.11.5"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/lbdremy/lbdremy.co.git"
