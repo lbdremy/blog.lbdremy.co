@@ -51,7 +51,7 @@ Article.list = function(path,callback){
 	co(function *(){
 		var files = yield fs.readdir(path);
 		var articles = files.filter(function(filename){
-			return !(filename === '.' || filename === '..');
+			return !(filename === '.' || filename === '..' || filename[0] === '.');
 		}).map(function(filename){
 			var date = filename.slice(0,10);
 			var title = filename.slice(11,filename.length - 3);
@@ -76,9 +76,21 @@ Article.list = function(path,callback){
 Article.read = function(path,callback){
 	co(function *(){
 		var stat = yield fs.stat(path);
-		if(!stat.isFile()) throw new Error('Not found');
 		var file = yield fs.readFile(path,'utf8');
 		var article = yield mark(file,{});
 		return article;
 	})(callback);
+}
+
+/**
+ * Check if the article exists
+ * @param {String} path
+ * @param {Function} callback
+ */
+
+Article.exists = function(path,callback){
+	co(function *(){
+		var exists = yield fs.exists(path);
+		return exists;
+	})(callback)
 }
