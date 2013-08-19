@@ -62,6 +62,9 @@ module.exports = function(app){
 	env.addFilter('prettyDate',function(date){
 		return moment(new Date(date)).fromNow();
 	});
+	env.addFilter('urlencode',function(value){
+		return encodeURIComponent(value);
+	});
 
 
 }
