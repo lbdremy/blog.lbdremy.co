@@ -20,6 +20,16 @@ a {
     color: #ff4a4a;
 }
 
+blockquote {
+    border-left: 4px solid rgb(221, 221, 221);
+    padding: 0 15px;
+    color: rgb(119, 119, 119);
+}
+
+blockquote p {
+    display: inline;
+}
+
 .root {
     color: #494949;
     text-decoration: none;
