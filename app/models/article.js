@@ -17,7 +17,7 @@ marked.setOptions({
 	tables: true,
 	breaks: false,
 	pedantic: false,
-	sanitize: true,
+	sanitize: false,
 	smartLists: true,
 	langPrefix: 'language-',
 	highlight: function(code,lang){
@@ -62,6 +62,8 @@ Article.list = function(path,callback){
 				date : date
 			};
 			return article;
+		}).sort(function(prev,next){
+			return !(new Date(prev).getTime() > new Date(next).getTime())
 		});
 		return articles;
 	})(callback)
