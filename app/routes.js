@@ -43,7 +43,8 @@ module.exports = function(app){
 			res.render('list.html',{
 				articles : articles,
 				sections : sections,
-				section : section
+				section : section,
+				title : utils.getTitle(req.params.section)
 			});
 		});
 	});
@@ -62,7 +63,8 @@ module.exports = function(app){
 				res.render('article.html',{
 					article : article,
 					sections : sections,
-					section : section
+					section : section,
+					title : utils.getTitle(req.params.section,req.params.article)
 				});
 			});
 		});

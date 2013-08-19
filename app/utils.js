@@ -16,3 +16,19 @@ exports.isSection = function(section,sections){
 	}
 	return false;
 }
+
+/**
+ * Deduce title from the name of the file using naming convention
+ * @param {String} section - name of the section
+ * @param {String} name - filename
+ * @return {String} title of the article
+ */
+
+exports.getTitle = function(section,name){
+	var title = '';
+	if(name){
+		title = name.slice(11).replace(/-/g,' ');
+		title = title[0].toUpperCase() + title.slice(1) + ' - ';
+	}
+	return title + 'lbdremy/' + section.toLowerCase();
+};
