@@ -1,0 +1,23 @@
+# Mon coup de coeur du TEDxPlaceDuCapitole
+
+[TEDxPlaceDuCapitole](http://tedxplaceducapitole.com/les-idees-ont-le-pouvoir-les-idees-changent-le-monde-3) édition 2012 a eu lieu le Samedi 14 janvier à l'Hotel Dieu à Toulouse et je dois dire que c'était une vrai réussite! Bravo aux organisateurs, aux intervenants et au traiteur (oui c'était très bon la réception). Pour ceux d'entre vous qui ne connaissent pas les événements TEDx, j'aimerais en parler brièvement. Un TEDx c'est une conférence qui regroupe un ensemble d'intervenants, de talents régionaux qui ont chacun 6 à 18 minutes pour transmettre leurs idées, leurs expériences, leurs observations, leurs visions et je dirai même leurs croyances (pas dans le sens de la religion). Les noms des intervenants sont connus avant la conférence néanmoins et c'est une particularité des TED(x), les sujets des intervenants ne sont pas connus à l'avance, l'audience découvre donc à chaque début de session le sujet, ce qui je l'avoue est assez excitant! Les sujets abordés gravitent autour de la science, les technologies, l'architecture, l'économie, l'humain et l'art.
+
+##[Artilec FabLab](http://artilect.fr/index.php?page=accueil.php)
+Juste avant le goûter (oui oui on goûte au TEDx Toulouse :) ), Nicolas Lassabe co-fondateur d’Artilect FabLab Toulouse est venu nous présenter son bébé.
+Artilec FabLab est un atelier collaboratif issu du réseau mondial des FabLabs (Laboratoires de fabrication). Ces laboratoires rendent possible la création d'objets à tout individu en donnant accès à des outils de fabrication numérique.
+Par exemple le FabLab de Toulouse dispose d'une [imprimante 3D MakerBot](http://www.makerbot.com/); ainsi avec un logiciel de conception 3D adapté comme [Blender](http://www.blender.org/) ou [Open Scad](http://www.openscad.org/) vous créez votre objet sur votre ordinateur et l'imprimante lui donnera la vie dans notre monde physique.
+Pour ceux qui n'ont pas la chance d'avoir un FabLab près de chez eux, vous pouvez aussi uploader et imprimer vos créations sur [ThingIverse](http://www.thingiverse.com/) et vous les faire livrer à la maison.
+Voici une vidéo de cette imprimante en fonction:
+<iframe width="560" height="315" src="http://www.youtube.com/embed/skBT32Qicd8" frameborder="0" allowfullscreen></iframe>
+Plutôt impressionnnant non! Imaginez les possibilités...
+
+Le FabLab dispose aussi [d'autre outils de fabrication numérique](http://artilect.fr/index.php?page=equipements.php) qui permettent de créer une plus grande variété d'objets en manipulant, sculptant différents matériaux.
+
+Ce genre d'initiative me fait beaucoup penser à [Arduino](http://arduino.cc/fr/Main/DebuterIntroduction). Arduino est une platforme de développement de produits électronique open-source. Elle possède un nombre impressionnant de composants électroniques programmables permettant de capter et analyser les variables de notre environnement. Finalement Arduino rend accessible et abordable la création de système électronique complexe tout comme FabLab le fait dans le milieu de la fabrication.
+Si maintenant on additionne Arduino, FabLab et les efforts des communautés open-source dans le milieu de la programmation je ne vois vraiment pas ce qui nous empêche de créer et d'innover, on commence à être vraiment bien armée!
+Pour ceux qui manque d'imagination j'ai une petite idée pour vous pour commencer. Je voudrais un petit objet à mettre dans mon salon qui s'occupe de garder le son de ma télévision toujours au même niveau. Je suis sûr que ça vous ennuie aussi le son qui change entre les pubs et bien moi aussi! Puisse cette idée vous rendre riche et prospère ;).
+
+Pour tout les curieux qui veulent participer [aux activités de Artilec FabLab](http://artilect.fr/index.php?page=rencontre.php&id=100), il semble qu'ils se réunissent tout les lundis à la Manufacture des Tabacs, 21 Allée de Brienne à Toulouse.
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=21+All%C3%A9e+de+Brienne,+31015+Toulouse&amp;aq=&amp;g=21+All%C3%A9e+de+Brienne,+31015+Toulouse&amp;ie=UTF8&amp;hq=&amp;hnear=21+All%C3%A9e+de+Brienne,+31000+Toulouse,+Haute-Garonne,+Midi-Pyr%C3%A9n%C3%A9es&amp;ll=43.605397,1.432587&amp;spn=0.002672,0.005681&amp;t=m&amp;z=14&amp;vpsrc=6&amp;output=embed"></iframe>
+[Agrandir la carte](http://maps.google.fr/maps?q=21+All%C3%A9e+de+Brienne,+31015+Toulouse&hl=fr&ie=UTF8&ll=43.605447,1.432954&spn=0.002672,0.005681&hnear=21+All%C3%A9e+de+Brienne,+31000+Toulouse,+Haute-Garonne,+Midi-Pyr%C3%A9n%C3%A9es&t=m&z=18&vpsrc=6)
