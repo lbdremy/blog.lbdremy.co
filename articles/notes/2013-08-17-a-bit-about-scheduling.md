@@ -72,7 +72,7 @@ The 𝜸 field describes the objectives to be minimized (i.e: optimized). It may
 
 	- __Makespan__: Is the completion time of the last job to leave the system. A minimum makespan usually implies a good utilization of the machine.
 	- __Maximum Lateness__: It measures the worst violation of the due dates.
-	- __Total weighted completion time__:
+	- __Total weighted completion time__: It gives an indication of the total holding or inventory costs incurred by the schedule.
 	- __Discounted total weighted completion time__:
 	- __Total weighted tardiness__:
 	- __Weighted number of tardy jobs__:
