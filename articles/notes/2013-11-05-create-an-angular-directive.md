@@ -6,6 +6,7 @@
 > - clean-up on the $destroy event, see element.on('$destroy',...) or scope.$on('$destroy',...)
 > - only use the `transclude : true` when you want to create a directive wraping arbitraty content
 
+**HTML chunk:**
 
 ```html
 <html>
@@ -18,7 +19,9 @@
 </html>
 ```
 
-```js
+**Javascript chunk:**
+
+```javascript
 var app = angular.module('MyApp');
 
 // Load controller
