@@ -32,6 +32,12 @@ npm install --save-dev grunt-concurrent
 npm install --save-dev grunt-contrib-connect
 ```
 
+### [notify](https://github.com/dylang/grunt-notify)
+
+```
+npm install --save-dev grunt-notify
+```
+
 ## Libraries
 
 ### [jshint](https://github.com/gruntjs/grunt-contrib-jshint)
