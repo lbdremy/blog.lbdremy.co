@@ -64,9 +64,11 @@ npm install --save-dev grunt-contrib-requirejs
 npm install --save-dev grunt-mocha
 ```
 
-### [cordova]()
+### [cordova-cli](https://github.com/lbdremy/grunt-cordova-cli)
 
-//TODO Create one the current one are not great
+```
+npm install --save-dev grunt-cordova-cli
+```
 
 ## HTML, CSS, IMAGES, SVG files transformers
 
