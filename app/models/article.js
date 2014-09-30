@@ -63,7 +63,7 @@ Article.list = function(path,callback){
 			};
 			return article;
 		}).sort(function(prev,next){
-			return !(new Date(prev).getTime() > new Date(next).getTime())
+			return new Date(prev.date).getTime() > new Date(next.date).getTime() ? -1 : 1;
 		});
 		return articles;
 	})(callback)
