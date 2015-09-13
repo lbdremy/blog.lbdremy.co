@@ -5,6 +5,8 @@
 var nunjucks = require('nunjucks');
 var express = require('express');
 var moment = require('moment');
+var compression = require('compression');
+var responseTime = require('response-time');
 
 /**
  * Load errors
@@ -13,10 +15,10 @@ var moment = require('moment');
 var NotFoundError = require('./errors/not-found-error');
 
 /**
- * Configure the given the `app`
+ * Mount the front middlewares on the given the `app`
  */
 
-module.exports = function(app){
+exports.front = function(app){
 
 	// Blog parameters
 	var sections = [
@@ -36,9 +38,35 @@ module.exports = function(app){
 	];
 	app.set('sections',sections);
 
-	// Middlewares
+	// Add header X-Response-Time
+	app.use(responseTime());
+
+	// Compress responses
+  	app.use(compression());
+
+	// Serve static assets
 	app.use(express.static(__dirname + '/../public'));
-	app.use(app.router);
+
+	// Use the templating system
+	var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(__dirname + '/views'));
+	env.express(app);
+	env.addFilter('prettyDate',function(date){
+		return moment(new Date(date)).fromNow();
+	});
+	env.addFilter('urlencode',function(value){
+		return encodeURIComponent(value);
+	});
+
+};
+
+/**
+ * Mount the back middlewares on the given the `app`
+ */
+
+exports.back = function(app){
+
+	var sections = app.get('sections');
+
 	app.use(function(err,req,res,next){
 		if(err instanceof NotFoundError){
 			console.warn(err.stack);
@@ -56,15 +84,4 @@ module.exports = function(app){
 		});
 	});
 
-	// Use the templating system
-	var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(__dirname + '/views'));
-	env.express(app);
-	env.addFilter('prettyDate',function(date){
-		return moment(new Date(date)).fromNow();
-	});
-	env.addFilter('urlencode',function(value){
-		return encodeURIComponent(value);
-	});
-
-
-}
+};

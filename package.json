@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines" : {
-    "node" : "0.11.5"
+  "engines": {
+    "node": "4.0.0"
   },
   "repository": {
     "type": "git",
@@ -19,12 +19,14 @@
     "url": "https://github.com/lbdremy/lbdremy.co/issues"
   },
   "dependencies": {
-    "marked": "~0.2.9",
-    "express": "~3.3.4",
-    "co": "~1.4.1",
-    "co-fs": "git://github.com/lbdremy/co-fs.git",
-    "highlight.js": "~7.3.0",
-    "nunjucks": "~0.1.9",
-    "moment": "~2.1.0"
+    "co": "^4.6.0",
+    "co-fs": "^1.2.0",
+    "compression": "^1.5.2",
+    "express": "^4.13.3",
+    "highlight.js": "^8.8.0",
+    "marked": "^0.3.5",
+    "moment": "^2.10.6",
+    "nunjucks": "^2.0.0",
+    "response-time": "^2.3.1"
   }
 }

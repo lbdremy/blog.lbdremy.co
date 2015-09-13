@@ -5,19 +5,25 @@
 var http = require('http');
 var app = require('express')();
 var routes = require('./routes');
-var configure = require('./configure');
+var middlewares = require('./middlewares');
 
 /**
- * Configure the app
+ * Mount front middlewares
  */
 
-configure(app);
+middlewares.front(app);
 
 /**
  * Mount the routes
  */
 
 routes(app);
+
+/**
+ * Mount back middlewares
+ */
+
+middlewares.back(app);
 
 /**
  * Start the server

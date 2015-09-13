@@ -21,4 +21,4 @@ function NotFoundError(message){
    	this.message = message;
 }
 
-inherits(Error,NotFoundError);
+inherits(NotFoundError,Error);

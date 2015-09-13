@@ -5,7 +5,14 @@
 var co = require('co');
 var marked = require('marked');
 var highlighter = require('highlight.js');
-var mark = co.wrap(marked);
+var mark = function wrapMarker(markdownString, options) {
+	return new Promise(function (resolve, reject) {
+		marked(markdownString, options, function (err, html) {
+			if (err) return reject(err);
+			resolve(html);
+		});
+	});
+};
 var fs = require('co-fs');
 
 /*!
@@ -21,7 +28,7 @@ marked.setOptions({
 	smartLists: true,
 	langPrefix: 'language-',
 	highlight: function(code,lang){
-		if(lang && highlighter.LANGUAGES[lang]) return highlighter.highlight(lang,code).value;
+		if(lang && highlighter.getLanguage(lang)) return highlighter.highlight(lang,code).value;
 		return highlighter.highlightAuto(code).value;
 	}
 });
@@ -47,8 +54,8 @@ function Article(){
  * @api public
  */
 
-Article.list = function(path,callback){
-	co(function *(){
+Article.list = function(path){
+	return co(function *(){
 		var files = yield fs.readdir(path);
 		var articles = files.filter(function(filename){
 			return !(filename === '.' || filename === '..' || filename[0] === '.');
@@ -66,7 +73,7 @@ Article.list = function(path,callback){
 			return new Date(prev.date).getTime() > new Date(next.date).getTime() ? -1 : 1;
 		});
 		return articles;
-	})(callback)
+	});
 };
 
 /**
@@ -75,13 +82,13 @@ Article.list = function(path,callback){
  * @param {Function} callback
  */
 
-Article.read = function(path,callback){
-	co(function *(){
+Article.read = function(path){
+	return co(function *(){
 		var stat = yield fs.stat(path);
 		var file = yield fs.readFile(path,'utf8');
 		var article = yield mark(file,{});
 		return article;
-	})(callback);
+	});
 }
 
 /**
@@ -90,9 +97,9 @@ Article.read = function(path,callback){
  * @param {Function} callback
  */
 
-Article.exists = function(path,callback){
-	co(function *(){
+Article.exists = function(path){
+	return co(function *(){
 		var exists = yield fs.exists(path);
 		return exists;
-	})(callback)
+	});
 }

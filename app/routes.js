@@ -38,15 +38,16 @@ module.exports = function(app){
 		}
 		var section = req.params.section;
 
-		Article.list(root + '/' + section,function(err,articles){
-			if(err) return next(err);
-			res.render('list.html',{
-				articles : articles,
-				sections : sections,
-				section : section,
-				title : utils.getTitle(req.params.section)
-			});
-		});
+		Article.list(root + '/' + section)
+			.then(function(articles){
+				res.render('list.html',{
+					articles : articles,
+					sections : sections,
+					section : section,
+					title : utils.getTitle(req.params.section)
+				});
+			})
+			.catch(next)
 	});
 
 	app.get('/:section/:article',function(req,res,next){
@@ -55,19 +56,20 @@ module.exports = function(app){
 		}
 		var section = req.params.section;
 		var article = root + '/' + section + '/' + req.params.article + '.md';
-		Article.exists(article,function(err,exists){
-			if(err) return next(err);
-			if(!exists) return next(new NotFoundError('The article "' + req.params.article + '" is unknown.'))
-			Article.read(article,function(err,article){
-				if(err) return next(err);
+		Article.exists(article)
+			.then(function(exists){
+				if(!exists) return next(new NotFoundError('The article "' + req.params.article + '" is unknown.'))
+				return Article.read(article);
+			})
+			.then(function(article){
 				res.render('article.html',{
 					article : article,
 					sections : sections,
 					section : section,
 					title : utils.getTitle(req.params.section,req.params.article)
 				});
-			});
-		});
+			})
+			.catch(next);
 	});
 
 }
